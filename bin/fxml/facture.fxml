@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="619.0" prefWidth="1084.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ControllerFacture">
+   <children>
+      <GridPane prefHeight="619.0" prefWidth="1084.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.0" minWidth="0.0" prefWidth="0.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1019.0" minWidth="10.0" prefWidth="1019.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="612.0" minHeight="10.0" prefHeight="610.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="69.0" minHeight="0.0" prefHeight="9.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <BorderPane prefHeight="619.0" prefWidth="1084.0" GridPane.columnIndex="1">
+               <top>
+                  <GridPane prefHeight="57.0" prefWidth="1019.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="96.0" minWidth="10.0" prefWidth="96.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="96.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="134.0" minWidth="10.0" prefWidth="97.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.0" minWidth="10.0" prefWidth="98.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="148.0" minWidth="10.0" prefWidth="126.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="838.0" minWidth="10.0" prefWidth="432.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="335.0" minWidth="0.0" prefWidth="82.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="btn_retour" mnemonicParsing="false" onAction="#btnretour" text="Retour" GridPane.columnIndex="6" />
+                        <Button fx:id="btn_tva" mnemonicParsing="false" onAction="#btntva" prefHeight="35.0" prefWidth="80.0" text="TVA" />
+                        <Button fx:id="btn_client" mnemonicParsing="false" onAction="#btnclient" prefHeight="35.0" prefWidth="80.0" text="CLIENT" GridPane.columnIndex="1" />
+                        <Button fx:id="btn_prod" mnemonicParsing="false" onAction="#btnprod" prefHeight="35.0" prefWidth="80.0" text="PRODUIT" GridPane.columnIndex="2" />
+                        <Button fx:id="btn_fact" mnemonicParsing="false" onAction="#btnfact" prefHeight="35.0" prefWidth="83.0" text="FACTURE" GridPane.columnIndex="3" />
+                        <Button fx:id="btn_lf" mnemonicParsing="false" onAction="#btnlf" prefHeight="35.0" text="LIGNE FACTURE" GridPane.columnIndex="4" />
+                     </children>
+                  </GridPane>
+               </top>
+               <left>
+                  <GridPane prefHeight="560.0" prefWidth="266.0" BorderPane.alignment="CENTER">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="266.0" minWidth="10.0" prefWidth="266.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="0.0" prefWidth="0.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="182.0" minHeight="10.0" prefHeight="23.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="428.0" minHeight="10.0" prefHeight="428.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="43.0" prefWidth="260.0" text="Création d'une nouvelle facture">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </Label>
+                        <GridPane GridPane.rowIndex="2">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="89.0" minWidth="10.0" prefWidth="77.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="117.0" minWidth="10.0" prefWidth="104.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="141.0" minWidth="10.0" prefWidth="85.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Button fx:id="btn_creer" mnemonicParsing="false" onAction="#btnajouter" prefHeight="37.0" prefWidth="71.0" text="Ajouter" />
+                              <Button fx:id="btn_modif" mnemonicParsing="false" onAction="#btnmodif" prefHeight="36.0" prefWidth="97.0" text="Modifier" visible="false" GridPane.columnIndex="1" />
+                              <Button fx:id="btn_suppr" mnemonicParsing="false" onAction="#btnsuppr" prefHeight="35.0" prefWidth="91.0" text="Supprimer" visible="false" GridPane.columnIndex="2" />
+                           </children>
+                        </GridPane>
+                        <GridPane prefHeight="428.0" prefWidth="314.0" GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="217.0" minHeight="8.0" prefHeight="51.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="417.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="446.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="446.0" minHeight="10.0" prefHeight="262.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <ComboBox fx:id="combobox_client" maxWidth="1.7976931348623157E308" prefHeight="40.0" prefWidth="266.0" promptText="Client" />
+                              <DatePicker fx:id="text_date" maxWidth="1.7976931348623157E308" prefHeight="40.0" GridPane.rowIndex="1" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </left>
+               <center>
+                  <TableView fx:id="tblFacture" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="523.0" prefWidth="678.0" BorderPane.alignment="CENTER">
+                    <columns>
+                      <TableColumn fx:id="colClient" prefWidth="314.0" text="Client" />
+                      <TableColumn fx:id="colDate" minWidth="0.0" prefWidth="177.0" text="Date" />
+                    </columns>
+                     <BorderPane.margin>
+                        <Insets left="35.0" />
+                     </BorderPane.margin>
+                  </TableView>
+               </center>
+            </BorderPane>
+         </children>
+      </GridPane>
+   </children>
+</Pane>
